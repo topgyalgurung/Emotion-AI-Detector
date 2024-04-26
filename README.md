@@ -24,9 +24,13 @@ Libraries used:
 
 1. Using Python Shell
 - first make sure requests library is installed 
-  - python3 -m pip install requests
+  ``` 
+  python3 -m pip install requests
+  ``` 
 - then run python shell command
-  - $ python3.11
+``` 
+    $ python3.11
+```
 - then run:
   ``` 
     from emotion_detection import emotion_detector
