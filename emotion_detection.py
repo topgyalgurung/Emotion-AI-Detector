@@ -27,12 +27,12 @@ import requests,json
 
 # Watson libraries are embedded. So only need to 
 
-    """
+"""
     text to be analyzed is passed to the function as an argument 
     and is stored in the variable text_to_analyze. 
     The value being returned must be the text attribute of the response object as received from the Emotion Detection function.
 
-    """
+"""
 def emotion_detector(text_to_analyse):
     url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict'
     header = {"grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang_en_stock"}
