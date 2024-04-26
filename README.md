@@ -29,7 +29,7 @@ Libraries used:
   ``` 
 - then run python shell command
 ``` 
-    $ python3.11
+    $ python3
 ```
 - then run:
   ``` 
