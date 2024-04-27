@@ -45,7 +45,7 @@ def emotion_detector(text_to_analyse):
     # Step 2: Extract required set of emotions
 
     if req.status_code == 200:
-        return emotion_predictor(json_response)
+        return json_response
     elif req.status_code == 400:
         return {"message":"no response to make"}
 {
@@ -99,11 +99,10 @@ json loads useful to have a JSON string to convert to python data structure
 """
 
 def emotion_predictor(text):
-     ''' return emotions with dominant emotion'''
-     if all(value is None for value in text.values()):
-        return text 
-    else:
-        emotion=text['emotionPredictions'][0]['emotion']
+	if all(value is None for value in text.values()):
+		return text 
+	if text['emotionPredictions'] is not None:
+		emotion=text['emotionPredictions'][0]['emotion']
 		result={
 		   'anger':emotion['anger'],
 		   "disgust":emotion['disgust'],
@@ -112,7 +111,7 @@ def emotion_predictor(text):
 		   "sadness":emotion['sadness'],
 		   "dominant_emotion": max(emotion,key=emotion.get)
 		   }
-		print(result)  
+		return result 
 
 def main():
         emotion_detector(" i love this new application")
