@@ -1,11 +1,21 @@
 # Emotion-AI-Detector
-AI Based Web application
 
-- Emotion Detection System that processes feedback provided by the customer in text format and deciphers the associated emotion expressed.
+AI Based Web application: Python web app using Flask and integrate Embeddable Watson AI libraries to make the web app showcase AI based abilities. 
+
+## Description:
+AI based app that perform analytics on customer feedback for their signature products. Emotion Detection System that processes feedback provided by the customer in text format and deciphers the associated emotion expressed.
 
 Libraries used:
 - Embeddable Watson AI
 
+Tasks:
+1. Send post request to correct function in the library and receive output
+2. Convert response text into a dictinary
+3. Package the application and test it
+4. Run unit tests - create test file to run unit tests
+5. Deploy the app
+6. Incorporate error handling
+7. Run static code analysis using PyLint library 
 
 # Installation:
 - install Flask using pip
@@ -28,16 +38,15 @@ Libraries used:
   python3 -m pip install requests
   ``` 
 - then run python shell command
-``` 
-    $ python3
-```
+```$ python3 ```
 - then run:
-  ``` 
+  ```
     from emotion_detection import emotion_detector
     emotion_detector("i love this new technology")
-  ```
-- Expected output in JSON:
-  ``` 
-    {'emotionPredictions': [{'emotion': {'anger': 0.25520793, 'disgust': 0.020005126, 'fear': 0.062086333, 'joy': 0.08512125, 'sadness': 0.17719638}, 'target': '', 'emotionMentions': [{'span': {'begin': 0, 'end': 15, 'text': 'text_to_analyse'}, 'emotion': {'anger': 0.25520793, 'disgust': 0.020005126, 'fear': 0.062086333, 'joy': 0.08512125, 'sadness': 0.17719638}}]}], 'producerId': {'name': 'Ensemble Aggregated Emotion Workflow', 'version': )
-        {'emotionPredictions': [{'emotion': {'anger': 0.25520793, 'disgust': 0.020005126, 'fear': 0.062086333, 'joy': 0.08512125, 'sadness': 0.17719638}, 'target': '', 'emotionMentions': [{'span': {'begin': 0, 'end': 15, 'text': 'text_to_analyse'}, 'emotion': {'anger': 0.25520793, 'disgust': 0.020005126, 'fear': 0.062086333, 'joy': 0.08512125, 'sadness': 0.17719638}}]}], 'producerId': {'name': 'Ensemble Aggregated Emotion Workflow', 'version': '0.0.1'}}
+  ```     
+
+2. Static code analysis
+- Using PyLint
+```
+  pylint server.py
 ```
