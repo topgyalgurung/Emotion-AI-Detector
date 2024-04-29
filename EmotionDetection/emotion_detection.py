@@ -48,44 +48,8 @@ def emotion_detector(text_to_analyse):
         return json_response
     elif req.status_code == 400:
         return {"message":"no response to make"}
-{
-""" sample output: 
-  'emotionPredictions': [
-    {
-      'emotion': {
-        'anger': 0.584618,
-        'disgust': 0.04331746,
-        'fear': 0.027819801,
-        'joy': 0.009122466,
-        'sadness': 0.27680367
-      },
-      'target': '',
-      'emotionMentions': [
-        {
-          'span': {
-            'begin': 0,
-            'end': 19,
-            'text': 'i hate this new app'
-          },
-          'emotion': {
-            'anger': 0.584618,
-            'disgust': 0.04331746,
-            'fear': 0.027819801,
-            'joy': 0.009122466,
-            'sadness': 0.27680367
-          }
-        }
-      ]
-    }
-  ],
-  'producerId': {
-    'name': 'Ensemble Aggregated Emotion Workflow',
-    'version': '0.0.1'
-  }
-}
-"""
 # access doctring which document python module, class, function or method 
-print(emotion_detector.__doc__)
+#print(emotion_detector.__doc__)
 
 """
 json loads useful to have a JSON string to convert to python data structure
@@ -113,9 +77,9 @@ def emotion_predictor(text):
 		   }
 		return result 
 
-def main():
-        emotion_detector(" i love this new application")
+# def main():
+#         emotion_detector(" i love this new application")
 
-if __name__=="__main__":
-    main()
+# if __name__=="__main__":
+#     main()
 
